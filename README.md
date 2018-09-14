@@ -10,19 +10,19 @@ Add the ArgentinaDataGenerator library to your `composer.json` file:
 
 ## Usage
 
-Use the new `ArgentinaDataGenerator\CuitFakerProvider` class in combination with [Faker](https://github.com/fzaninotto/Faker) to produce CUIT numbers.
+### Without framework
 
     <?php
-    $faker = Faker\Factory::create();
-    $faker->addProvider(new \ArgentinaDataGenerator\CuitFakerProvider($faker));
-    for ($i=0; $i < 5; $i++) {
-        echo $faker->cuit, "\n";
-    }
+    echo \ArgentinaDataValidator\Cuit::isValid(20305423174)) ? 'valido' : 'no valido';  // valido
     
-This snippet generates 5 awesome CUIT/CUIL valid numbers. Here is an example output from CuitFaker:
+### Laravel
 
-    20-48028763-1
-    33-25497340-3
-    33-35036407-8
-    20-12145175-2
-    33-37145386-0
+    <?php
+    public function store(Request $request)
+    {
+        $validatedData = $request->validate([
+            'cuit' => 'cuit',
+        ]);
+    
+        // The entity post is valid...
+    }

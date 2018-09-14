@@ -38,7 +38,7 @@ class CuitValidatorTest extends TestCase
                 ], $rule
             );
             $error = $validator->errors()->messages()['cuit'][0];
-            $this->assertSame($error, 'El CUIT-CUIL ingresado no es valido.');
+            $this->assertSame($error, 'El CUIT-CUIL ingresado no es válido.');
         }
     }
 
@@ -56,8 +56,7 @@ class CuitValidatorTest extends TestCase
                     'cuit' => $cuit,
                 ], $rule
             );
-            $passes = $validator->passes();
-            $this->assertTrue($passes);
+            $this->assertTrue($validator->passes());
         }
     }
 }

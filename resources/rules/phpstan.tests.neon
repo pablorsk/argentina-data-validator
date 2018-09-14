@@ -3,10 +3,8 @@ includes:
 	- ../../vendor/phpstan/phpstan-phpunit/extension.neon
 	- ../../vendor/phpstan/phpstan-phpunit/rules.neon
 	- ../../vendor/phpstan/phpstan-phpunit/strictRules.neon
-	- ../../vendor/weebly/phpstan-laravel/extension.neon
 
 parameters:
-	bootstrap: %rootDir%/../../../resources/ci/tools/phpstan/bootstrap.php
 	ignoreErrors:
 		- '#Parameter \#2 \$delimiters of function League\\Csv\\delimiter_detect expects array<string>, array<int, array|string> given.#'
 		- '#Access to an undefined property .+::\$response\.#'

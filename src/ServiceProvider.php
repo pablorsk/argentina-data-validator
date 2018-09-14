@@ -23,5 +23,7 @@ class ServiceProvider extends BaseServiceProvider
     {
         $validator->extend('cuit', 'ArgentinaDataValidator\CuitValidator@validateCuit');
         $validator->replacer('cuit', 'ArgentinaDataValidator\CuitValidator@replaceCuit');
+        $validator->extend('cbu', 'ArgentinaDataValidator\CbuValidator@validateCbu');
+        $validator->replacer('cbu', 'ArgentinaDataValidator\CbuValidator@replaceCbu');
     }
 }

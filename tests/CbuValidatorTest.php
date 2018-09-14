@@ -29,6 +29,7 @@ class CbuValidatorTest extends TestCase
             'cbu' => 'cbu',
         ];
 
+        /** @var \Illuminate\Validation\Validator */
         $validator = Validator::make(
             [
                 'cbu' => '0720262188000036092118',

@@ -51,6 +51,7 @@ class CuitValidatorTest extends TestCase
         $validCuits = ['20319731467', '23129006544', '20385823631'];
 
         foreach ($validCuits as $cuit) {
+            /** @var \Illuminate\Validation\Validator */
             $validator = Validator::make(
                 [
                     'cuit' => $cuit,

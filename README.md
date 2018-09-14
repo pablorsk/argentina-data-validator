@@ -6,7 +6,7 @@ Validate Argentina CBU and CUIT/CUIL
 
 Add the ArgentinaDataGenerator library to your `composer.json` file:
 
-    composer require pablorsk/argentina-data-validator --dev
+    composer require pablorsk/argentina-data-validator
 
 ## Usage
 
